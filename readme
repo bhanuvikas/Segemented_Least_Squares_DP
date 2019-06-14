@@ -1,0 +1,14 @@
+Team Members:
+	Parameswar K - 2016A7PS0021H
+	Anish Reddy E - 2016A7PS0104H
+	Bhanu Vikas Y - 2016A7PS0106H
+
+Do the following commands:
+
+1. Compile & Run the cpp code for segmented least squares
+	g++ line_fitting.cpp
+	./a.out
+2. Run the python visualization file
+	python3 visual.py
+
+Gif is created which can be viewed in an image viewer

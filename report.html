@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+div.epm{
+  background-color: lightgreen;
+  width: 700px;
+  border: 15px;
+  padding: 50px;
+  margin: 20px;
+}
+p{
+font-family: "Times New Roman", Times, serif;
+}
+h1{
+font-family: "Times New Roman", Times, serif;
+}
+h2{
+font-family: "Times New Roman", Times, serif;
+}
+</style>
+<body>
+<h1><center>Segmented Least Squares-Dynamic Programming</center></h1>
+<h4 align = "right">Parameswar K - 2016A7PS0021H</h4>
+<h4  align = "right">Anish Reddy E - 2016A7PS0104H</h4>
+<h4 align = "right">Bhanu Vikas Y - 2016A7PS0106H</h4>
+<h2>Pseudo Code :</h2>
+<div class = "epm" style='font-size:20px;'><p><font color="blue">Input</font> : N,P<sub>1</sub>,P<sub>2</sub>,...,P<sub>N</sub>,C</p>
+<p>Segmented-Least-Squares() {<p>
+<p>&emsp;&emsp;M[0] = 0</p>
+<p>&emsp;&emsp;<font color="blue">for</font> j = 1 to N</p>
+<p>&emsp;&emsp;&emsp;&emsp;<font color="blue">for</font> i = 1 to j</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;compute the least square error e<sub>ij</sub>for the segment pi,..., pj</p>
+<p>&emsp;&emsp;<font color="blue">for</font> j = 1 to N</p>
+<p>&emsp;&emsp;&emsp;&emsp;M[j] = min<sub>1<=i<=j</sub> (e<sub>ij</sub>+ C + M[i-1])</p>
+<p>&emsp;&emsp;<font color="blue">return</font> M[N]</p>
+<p>}</p></p></p></div>
+<h2>Running Time :</h2><p style='font-size:25px; margin : 20px;'>O(n<sup>3</sup>)<sup><span style='font-size:25px;'>&#8601;</span><sup><sup style='font-size:20px;'>can be improved to O(n<sup>2</sup>) by pre-computing various statistics</sup></sup></sup></p>
+
+<h2>Observations : </h2>
+<img src="linefitting.gif">
+ <ul>
+  <li><p style='font-size:20px;'>Number of Line segments decrease with increase of value of C</p></li>
+  <li><p style='font-size:20px;'>After certain value of C,it behaves as a best-fit line</p></li>
+  <li><p style='font-size:20px;'>At C = 0,Error is 0</p></li>
+</ul> 
+<h2>Limitations : </h2>
+<ul>
+<li><p style='font-size:20px;'>It may not give correct output if the input contains two points with same x-coordinate</p></li>
+</ul>
+</body></html>
